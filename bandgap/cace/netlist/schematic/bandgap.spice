@@ -1,0 +1,25 @@
+** sch_path: /home/clisboa/realhome/Documents/gf180/bandgap/cace/testbenches/bandgap.sch
+.subckt bandgap VDD PB1 VBG VSS
+*.PININFO VSS:B VDD:B PB1:B VBG:B
+R0 net7 VSET 1.7k
+R1 VSET VSS 7.6k
+R2 VB0 VBG 17000
+XQ1 PB1 net8 net6 VSS npn_10p00x10p00 m=12
+XQ0 VB0 VB0 net3 VSS npn_10p00x10p00
+XM4 VSS net2 VSS VSS nfet_03v3 L=1u W=19u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM2 net2 VSS VDD VDD pfet_03v3 L=10u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM3 net5 net2 VDD VDD pfet_03v3 L=2u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM1 net1 net1 VDD VDD pfet_03v3 L=7.4u W=20u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM0 net4 net1 VDD VDD pfet_03v3 L=7.4u W=20u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+VQ0E net3 VSET 0
+VM0D net4 VB0 0
+VM3D net5 VB0 0
+VQ1E net6 net7 0
+VM1D net1 PB1 0
+VQ1B VBG net8 0
+.ends

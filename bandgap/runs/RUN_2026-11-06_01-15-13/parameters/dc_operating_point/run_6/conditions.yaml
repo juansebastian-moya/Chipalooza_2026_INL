@@ -1,0 +1,5 @@
+N: 6
+dut: null
+filename: bandgap_dc
+temperature: '125'
+vdd: '4.5'

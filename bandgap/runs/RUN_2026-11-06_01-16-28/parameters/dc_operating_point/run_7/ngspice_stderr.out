@@ -1,0 +1,7 @@
+Error: unknown subckt: x1 vdd pb1 vbg vss bandgap
+    in line no. 7 from file bandgap_dc.spice
+    Simulation interrupted due to error!
+
+Error: incomplete or empty netlist
+       or no ".plot", ".print", or ".fourier" lines in batch mode;
+no simulations run!

@@ -1,0 +1,4 @@
+Error: Could not find include file bandgap.spice
+    While reading bandgap_dc.spice
+
+ERROR: fatal error in ngspice, exit(1)

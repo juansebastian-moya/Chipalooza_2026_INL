@@ -1,0 +1,5 @@
+Using run time directory XSCHEM_SHAREDIR = /usr/local/share/xschem
+Sourcing /usr/local/share/xschem/xschemrc init file
+Sourcing /usr/local/share/OpenPDKs/gf180mcuD/libs.tech/xschem/xschemrc init file
+pdk installation: using /usr/local/share/OpenPDKs
+180MCU_MODELS: /usr/local/share/OpenPDKs/gf180mcuD/libs.tech/ngspice

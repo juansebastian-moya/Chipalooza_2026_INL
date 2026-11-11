@@ -1,0 +1,18 @@
+Running parameters: dc_operating_point
+Generating simulation netlist from schematic…
+No project xschemrc file found at: cace/testbenches/xschemrc
+It is highly recommended to set up an xschemrc file for your project.
+Using the PDK xschemrc instead…
+Parameter dc_operating_point: Generating simulation files…
+No "spiceinit" file found in the gf180mcuD PDK.
+No "spiceinit" file found in the gf180mcuD PDK.
+No "spiceinit" file found in the gf180mcuD PDK.
+No "spiceinit" file found in the gf180mcuD PDK.
+No "spiceinit" file found in the gf180mcuD PDK.
+No "spiceinit" file found in the gf180mcuD PDK.
+No "spiceinit" file found in the gf180mcuD PDK.
+No "spiceinit" file found in the gf180mcuD PDK.
+No "spiceinit" file found in the gf180mcuD PDK.
+Parameter dc_operating_point: Running simulations…
+Parameter dc_operating_point: Collecting results…
+Done with CACE simulations and evaluations in 0:00:01.

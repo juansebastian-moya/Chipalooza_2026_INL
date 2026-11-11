@@ -1,0 +1,27 @@
+** sch_path: /home/clisboa/realhome/Documents/gf180/bandgap/runs/RUN_2026-11-06_01-32-36/parameters/dc_operating_point/run_5/bandgap_dc.sch
+**.subckt bandgap_dc
+V1 VSS GND 0
+V2 VDD VSS {5.5}
+C1 VBG VSS 35p
+* noconn PB1
+x1 VDD PB1 VBG VSS bandgap
+**** begin user architecture code
+
+
+.temp {27}
+.option method=gear
+.control
+save all
+op
+
+print vbg
+
+wrdata bandgap_dc_5.data v(VBG) v(PB1)
+.endc
+
+
+ blabla
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

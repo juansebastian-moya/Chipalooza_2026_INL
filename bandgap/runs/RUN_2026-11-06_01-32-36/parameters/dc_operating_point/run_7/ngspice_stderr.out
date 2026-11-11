@@ -1,0 +1,4 @@
+ERROR: mal formed B source instance: blabla
+    in line no. 23 of file bandgap_dc.spice
+
+ERROR: fatal error in ngspice, exit(1)

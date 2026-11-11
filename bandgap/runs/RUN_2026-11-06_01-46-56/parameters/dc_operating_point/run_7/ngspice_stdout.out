@@ -1,0 +1,13 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: ** sch_path: /home/clisboa/realhome/documents/gf180/bandgap/runs/run_2026-11-06_01-46-56/parameters/dc_operating_point/run_7/bandgap_dc.sch
+
+Doing analysis at TEMP = 125.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+ Reference value :  0.00000e+00
+No. of Data Rows : 1
+v(vbg) = 9.059115e-01
+Note: Simulation executed from .control section 

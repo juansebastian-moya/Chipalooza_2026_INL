@@ -1,0 +1,4 @@
+Error: Could not find include file /home/clisboa/Documents/gf180/bandgap/cace/netlist/schematic/schematic/
+    While reading bandgap_dc.spice
+
+ERROR: fatal error in ngspice, exit(1)

@@ -1,0 +1,23 @@
+Warning: singular matrix:  check node vbg
+
+Note: Starting dynamic gmin stepping
+Warning: singular matrix:  check node vbg
+
+Warning: Dynamic gmin stepping failed
+Note: Starting true gmin stepping
+Warning: singular matrix:  check node vbg
+
+Warning: singular matrix:  check node vbg
+
+Warning: singular matrix:  check node vbg
+
+Warning: singular matrix:  check node vbg
+
+Warning: True gmin stepping failed
+Note: Starting source stepping
+Warning: source stepping failed
+Note: Transient op started
+Note: Transient op finished successfully
+Error: no such vector PB1
+  in term: v(PB1)
+

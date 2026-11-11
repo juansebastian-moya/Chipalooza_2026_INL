@@ -1,0 +1,34 @@
+** sch_path: /home/clisboa/realhome/Documents/gf180/bandgap/runs/RUN_2026-11-06_01-15-13/parameters/dc_operating_point/run_2/bandgap_dc.sch
+**.subckt bandgap_dc
+V1 VSS GND 0
+V2 VDD VSS {5.5}
+C1 VBG VSS 35p
+* noconn PB1
+*  x1 -  bandgap  IS MISSING !!!!
+**** begin user architecture code
+
+
+.temp {-40}
+.option method=gear
+.control
+save all
+op
+wrdata bandgap_dc_2.data v(VBG) v(PB1)
+.endc
+
+
+
+.include /usr/local/share/OpenPDKs/gf180mcuD/libs.tech/ngspice/design.ngspice
+.include {CACE{dut}}
+
+.lib /usr/local/share/OpenPDKs/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical
+.lib /usr/local/share/OpenPDKs/gf180mcuD/libs.tech/ngspice/sm141064.ngspice res_typical
+.lib /usr/local/share/OpenPDKs/gf180mcuD/libs.tech/ngspice/sm141064.ngspice moscap_typical
+.lib /usr/local/share/OpenPDKs/gf180mcuD/libs.tech/ngspice/sm141064.ngspice bjt_typical
+.lib /usr/local/share/OpenPDKs/gf180mcuD/libs.tech/ngspice/sm141064.ngspice cap_mim
+.lib /usr/local/share/OpenPDKs/gf180mcuD/libs.tech/ngspice/sm141064.ngspice mimcap_typical
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

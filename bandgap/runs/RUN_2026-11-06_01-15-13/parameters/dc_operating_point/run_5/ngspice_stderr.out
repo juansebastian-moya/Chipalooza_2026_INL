@@ -1,0 +1,4 @@
+Error: Could not find include file {CACE{dut}}
+    While reading bandgap_dc.spice
+
+ERROR: fatal error in ngspice, exit(1)

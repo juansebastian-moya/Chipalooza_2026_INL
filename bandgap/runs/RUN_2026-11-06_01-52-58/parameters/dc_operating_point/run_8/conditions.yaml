@@ -1,0 +1,5 @@
+DUT_path: /home/clisboa/realhome/Documents/gf180/bandgap/cace/netlist/schematic/schematic/bandgap.spice
+N: 8
+filename: bandgap_dc
+temperature: '125'
+vdd: '5.5'

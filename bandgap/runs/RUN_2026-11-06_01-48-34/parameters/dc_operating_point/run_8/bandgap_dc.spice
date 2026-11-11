@@ -1,0 +1,36 @@
+** sch_path: /home/clisboa/realhome/Documents/gf180/bandgap/runs/RUN_2026-11-06_01-48-34/parameters/dc_operating_point/run_8/bandgap_dc.sch
+**.subckt bandgap_dc
+V1 VSS GND 0
+V2 VDD VSS {5.5}
+x1 VDD PB1 VBG VSS bandgap
+* noconn PB1
+C1 VBG VSS 35p
+**** begin user architecture code
+
+
+.temp {125}
+.option method=gear
+
+.control
+save all
+op
+print v(VBG)
+wrdata bandgap_dc_8.data v(VBG
+.endc
+
+
+
+.include /usr/local/share/OpenPDKs/gf180mcuD/libs.tech/ngspice/design.ngspice
+.include /home/clisboa/realhome/Documents/gf180/bandgap/cace/netlist/schematic/schematic/bandgap.spice
+
+.lib /usr/local/share/OpenPDKs/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical
+.lib /usr/local/share/OpenPDKs/gf180mcuD/libs.tech/ngspice/sm141064.ngspice res_typical
+.lib /usr/local/share/OpenPDKs/gf180mcuD/libs.tech/ngspice/sm141064.ngspice moscap_typical
+.lib /usr/local/share/OpenPDKs/gf180mcuD/libs.tech/ngspice/sm141064.ngspice bjt_typical
+.lib /usr/local/share/OpenPDKs/gf180mcuD/libs.tech/ngspice/sm141064.ngspice cap_mim
+.lib /usr/local/share/OpenPDKs/gf180mcuD/libs.tech/ngspice/sm141064.ngspice mimcap_typical
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

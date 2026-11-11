@@ -1,0 +1,65 @@
+** sch_path: /home/clisboa/realhome/Documents/gf180/bandgap/runs/RUN_2026-11-06_00-53-41/parameters/dc_operating_point/run_2/bandgap_dc.sch
+**.subckt bandgap_dc
+V1 VSS GND 0
+V2 VDD VSS {5.5}
+C1 VBG VSS 35p
+* noconn PB1
+x1 VDD PB1 VBG VSS bandgap
+**** begin user architecture code
+
+
+.temp {-40}
+.option method=gear
+.control
+save all
+op
+wrdata bandgap_dc_2.data v(VBG) v(PB1)
+.endc
+
+
+
+.include /usr/local/share/OpenPDKs/gf180mcuD/libs.tech/ngspice/design.ngspice
+
+.lib /usr/local/share/OpenPDKs/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical
+.lib /usr/local/share/OpenPDKs/gf180mcuD/libs.tech/ngspice/sm141064.ngspice res_typical
+.lib /usr/local/share/OpenPDKs/gf180mcuD/libs.tech/ngspice/sm141064.ngspice moscap_typical
+.lib /usr/local/share/OpenPDKs/gf180mcuD/libs.tech/ngspice/sm141064.ngspice bjt_typical
+.lib /usr/local/share/OpenPDKs/gf180mcuD/libs.tech/ngspice/sm141064.ngspice cap_mim
+.lib /usr/local/share/OpenPDKs/gf180mcuD/libs.tech/ngspice/sm141064.ngspice mimcap_typical
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  bandgap/cace/testbenches/bandgap.sym # of pins=4
+** sym_path: /home/clisboa/realhome/Documents/gf180/bandgap/cace/testbenches/bandgap.sym
+** sch_path: /home/clisboa/realhome/Documents/gf180/bandgap/cace/testbenches/bandgap.sch
+.subckt bandgap VDD PB1 VBG VSS
+*.iopin VSS
+*.iopin VDD
+*.iopin PB1
+*.iopin VBG
+R0 net7 VSET 1.7k
+R1 VSET VSS 7.6k
+R2 VB0 VBG 17000
+XQ1 PB1 net8 net6 VSS npn_10p00x10p00 m=12
+XQ0 VB0 VB0 net3 VSS npn_10p00x10p00
+XM4 VSS net2 VSS VSS nfet_03v3 L=1u W=19u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM2 net2 VSS VDD VDD pfet_03v3 L=10u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM3 net5 net2 VDD VDD pfet_03v3 L=2u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM1 net1 net1 VDD VDD pfet_03v3 L=7.4u W=20u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+XM0 net4 net1 VDD VDD pfet_03v3 L=7.4u W=20u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0
+VQ0E net3 VSET 0
+VM0D net4 VB0 0
+VM3D net5 VB0 0
+VQ1E net6 net7 0
+VM1D net1 PB1 0
+VQ1B VBG net8 0
+.ends
+
+.GLOBAL GND
+.end
